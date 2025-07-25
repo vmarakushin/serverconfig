@@ -13,7 +13,7 @@ spring:
 
 
   datasource:
-    url: jdbc:postgresql://postgre:5432/userdatabase?ssl=false
+    url: jdbc:postgresql://postgres:5432/userdatabase?ssl=false
     username: admin
     password: admin
     driver-class-name: org.postgresql.Driver
@@ -41,7 +41,9 @@ logging:
 
 eureka:
   instance:
-    hostname: app-network
+    hostname: user-service
   client:
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZone: http://discovery-service:8761/eureka

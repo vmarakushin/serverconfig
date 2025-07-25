@@ -20,7 +20,9 @@ springdoc:
 
 eureka:
   instance:
-    hostname: app-network
+    hostname: notification-service
   client:
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZone: http://discovery-service:8761/eureka

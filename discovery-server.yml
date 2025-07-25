@@ -6,4 +6,4 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
   instance:
-    hostname: app-network
+    hostname: discovery-server
