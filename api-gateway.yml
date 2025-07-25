@@ -13,12 +13,20 @@ spring:
             - Path=/user-service/**
           filters:
             - StripPrefix=1
+            - name: CircuitBreaker
+              args:
+                name: usersCircuitBreaker
+                fallbackUri: forward:/fallback/users
         - id: notification-service
           uri: lb://notification-service
           predicates:
             - Path=/notification-service/**
           filters:
             - StripPrefix=1
+            - name: CircuitBreaker
+              args:
+                name: notificationCircuitBreaker
+                fallbackUri: forward:/fallback/notification
       discovery:
         locator:
           enabled: true
