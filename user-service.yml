@@ -13,13 +13,13 @@ spring:
 
 
   datasource:
-    url: jdbc:postgresql://postgres:5432/userdatabase?ssl=false
+    url: jdbc:postgresql://localhost:5432/userdatabase?ssl=false
     username: admin
     password: admin
     driver-class-name: org.postgresql.Driver
 
   kafka:
-    bootstrap-servers: kafka:9092
+    bootstrap-servers: localhost:9092
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
@@ -41,9 +41,7 @@ logging:
 
 eureka:
   instance:
-    hostname: user-service
+    hostname: localhost
   client:
-    register-with-eureka: true
-    fetch-registry: true
     service-url:
-      defaultZone: http://discovery-server:8761/eureka
+      defaultZone: http://localhost:8761/eureka
