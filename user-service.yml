@@ -39,11 +39,3 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 
 
-eureka:
-  instance:
-    hostname: user-service
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://discovery-server:8761/eureka

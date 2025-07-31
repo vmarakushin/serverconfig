@@ -18,11 +18,3 @@ springdoc:
   api-docs:
     path: /v3/api-docs
 
-eureka:
-  instance:
-    hostname: notification-service
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://discovery-server:8761/eureka
